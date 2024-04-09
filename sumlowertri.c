@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     int a[20][20],i,j,r,c,sum=0;
