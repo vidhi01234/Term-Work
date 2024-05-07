@@ -1,11 +1,10 @@
 #include <stdio.h>
-
 int main()
 {
     int a[30],i,n,t,j,m,*p;
     printf("Enter range:");
     scanf("%d",&n);
-    p=a;
+    p=(int)malloc(n* sizeof(int));
     printf("Enter elements:\n");
     for(i=0;i<n;i++)
     {
