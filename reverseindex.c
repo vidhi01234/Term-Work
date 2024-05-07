@@ -2,26 +2,27 @@
 
 int main()
 {
-    int a[30],i,n,t,j,m;
+    int a[30],i,n,t,j,m,*p;
     printf("Enter range:");
     scanf("%d",&n);
+    p=a;
     printf("Enter elements:\n");
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",p+i);
     }
     printf("enter index:");
     scanf("%d",&m);
     for(i=m,j=n-1;i<j;i++,j--)
     {
-        t=a[i];
-        a[i]=a[j];
-        a[j]=t;
+        t=*(p+i);
+        *(p+i)=*(p+j);
+        *(p+j)=t;
     }
     printf("enter final array:\n");
     for(i=0;i<n;i++)
     {
-        printf("%d\t",a[i]);
+        printf("%d\t",*(p+i));
     }
 
     return 0;
